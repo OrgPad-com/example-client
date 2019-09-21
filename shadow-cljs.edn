@@ -1,0 +1,14 @@
+{:source-paths ["src"]
+ :dependencies [[reagent "0.7.0"]
+                [re-frame "0.10.5"]
+                [binaryage/devtools "0.9.10"]]
+ :nrepl        {:port 9000}
+ :builds       {:client {:target           :browser
+                         :output-dir       "resources/public/js/compiled"
+                         :asset-path       "/js/compiled"
+                         :modules          {:main {:init-fn example-client.core/init}}
+                         :compiler-options {:infer-externs :auto}
+                         :devtools         {:http-root  "resources/public"
+                                            :http-port  3000
+                                            :after-load example-client.core/mount-root
+                                            :watch-dir  "resources/public"}}}}

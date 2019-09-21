@@ -2,4 +2,7 @@
 /target
 /*-init.clj
 /resources/public/js/compiled
+/node_modules
+/.idea
 out
+package-lock.json

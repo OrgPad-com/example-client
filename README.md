@@ -17,6 +17,12 @@ or just run
 npm install
 ```
 
+Also, install Shadow-cljs compiler by running:
+
+```
+npm install -g shadow-cljs
+```
+
 ## How to run
 
 Set autorecompilation of LESS into CSS:

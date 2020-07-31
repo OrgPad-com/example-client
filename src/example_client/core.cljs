@@ -1,7 +1,7 @@
 (ns example-client.core
   (:require [reagent.core :as r]
             [re-frame.core :as rf]
-            [example-client.events :as events]
+            [example-client.subs]
             [example-client.views :as views]))
 
 (defn mount-root []
@@ -10,5 +10,5 @@
             (.getElementById js/document "app")))
 
 (defn init []
-  (rf/dispatch-sync [::events/initialize-db])
+  (rf/dispatch-sync [:events/initialize-db])
   (mount-root))

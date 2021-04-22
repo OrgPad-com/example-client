@@ -1,4 +1,5 @@
 (ns example-client.db)
 
 (def default-db
-  {:name "Re-frame"})
+  {:position {}
+   :current-player :player1})

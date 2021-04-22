@@ -10,5 +10,5 @@
             (.getElementById js/document "app")))
 
 (defn init []
-  (rf/dispatch-sync [::events/initialize-db])
+  (rf/dispatch-sync [:events/initialize-db])
   (mount-root))

@@ -1,6 +1,6 @@
 {:source-paths ["src"]
- :dependencies [[reagent "0.7.0"]
-                [re-frame "0.10.5"]
+ :dependencies [[reagent "1.0.0"]
+                [re-frame "1.2.0"]
                 [binaryage/devtools "0.9.10"]]
  :nrepl        {:port 9000}
  :builds       {:client {:target           :browser

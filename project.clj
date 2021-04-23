@@ -3,9 +3,9 @@
                  [org.clojure/clojurescript "1.10.520"
                   :exclusions [com.google.javascript/closure-compiler-unshaded
                                org.clojure/google-closure-library]]
-                 [thheller/shadow-cljs "2.8.55"]
-                 [reagent "0.8.1"]
-                 [re-frame "0.10.9"]]
+                 [thheller/shadow-cljs "2.12.5"]
+                 [reagent "1.0.0"]
+                 [re-frame "1.2.0"]]
 
   :plugins [[lein-less "1.7.5"]]
 

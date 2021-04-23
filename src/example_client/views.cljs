@@ -26,6 +26,7 @@
       (for [x (range 3)
             y (range 3)]
         ^{:key (str x y)} [field x y])]
-     [:button {:type "button"
-               :on-click #(rf/dispatch [:events/initialize-db])}
-      "Reset!"]]))
+     [:div {:style {:padding-top 10}}
+      [:button {:type     "button"
+                :on-click #(rf/dispatch [:events/initialize-db])}
+       "Reset!"]]]))

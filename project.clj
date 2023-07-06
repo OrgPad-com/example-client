@@ -1,13 +1,20 @@
 (defproject example-client "0.1.0-SNAPSHOT"
-  :dependencies [[org.clojure/clojure "1.10.1"]
-                 [org.clojure/clojurescript "1.10.520"
+  :dependencies [[org.clojure/clojure "1.11.1"]
+                 [org.clojure/clojurescript "1.11.60"
                   :exclusions [com.google.javascript/closure-compiler-unshaded
                                org.clojure/google-closure-library]]
-                 [thheller/shadow-cljs "2.12.5"]
-                 [reagent "1.0.0"]
-                 [re-frame "1.2.0"]]
+                 [thheller/shadow-cljs "2.24.1"]
+                 [reagent "1.2.0"]
+                 [re-frame "1.3.0"]
+                 [garden "1.3.10"]]
 
-  :plugins [[lein-less "1.7.5"]]
+  :plugins [[lein-garden "0.3.0"]]
+
+  :garden {:builds [{:id           "example-client"
+                     :source-paths ["src"]
+                     :stylesheet   example-client.css/styles
+                     :compiler     {:output-to     "resources/public/css/site.css"
+                                    :pretty-print? true}}]}
 
   :min-lein-version "2.5.3"
 

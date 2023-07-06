@@ -2,7 +2,8 @@
   (:require [reagent.dom :as r-dom]
             [re-frame.core :as rf]
             [example-client.subs]
-            [example-client.views :as views]))
+            [example-client.views :as views]
+            [example-client.events]))
 
 (defn mount-root []
   (rf/clear-subscription-cache!)

@@ -2,6 +2,18 @@
   (:require [re-frame.core :as rf]))
 
 (rf/reg-sub
-  :subs/name
+  :board
   (fn [db]
-    (:name db)))
+    (:board db)))
+
+(rf/reg-sub
+  :field
+  (fn [_]
+    (rf/subscribe [:board]))
+  (fn [board [_ x y]]
+    (get board [x y])))
+
+(rf/reg-sub
+  :won
+  (fn [db]
+    (:won db)))
